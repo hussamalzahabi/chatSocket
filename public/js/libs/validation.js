@@ -17,4 +17,4 @@ const isRealString = (text) =>{
 
 
 
-module.exports = {parseData};
+module.exports = {parseData , isRealString};

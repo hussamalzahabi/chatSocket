@@ -2,9 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Chat entrance</title>
+    <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
-$END$
+
+<form action="./chat.html" id="myFrom">
+    <h2>Welcome to my chat</h2>
+    <div class="grid">
+       <h4>Display name</h4>
+       <input type="text" name="name" />
+    </div>
+    <div class="grid">
+        <h4>Chat room</h4>
+        <input type="text" name="room" />
+    </div>
+
+    <div class="grid">
+        <h4>Active room</h4>
+        <select id="userRoomList">
+        </select>
+    </div>
+
+    <div class="grid">
+        <button>ACCESS</button>
+    </div>
+</form>
+
+<script src="./socket.io/socket.io.js"></script>
+<script  type="text/javascript">
+
+    let socket = io();
+    socket.on("connect",()=>{
+        console.log("1")
+    })
+    socket.on("updateUserRoomList",(data)=>{
+
+        console.log("emitted")
+
+        let userRoomList = document.querySelector("#userRoomList");
+        let selectDom = document.createElement("select");
+
+
+        data.forEach((data)=>{
+
+            let option = document.createElement("option");
+            let text = document.createTextNode(data);
+
+            option.appendChild(text);
+            selectDom.appendChild(option);
+
+        });
+
+        userRoomList.innerHTML = selectDom.innerHTML;
+
+    });
+
+</script>
+
+
 </body>
 </html>
