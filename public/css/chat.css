@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+html, body {
+    min-height: 100%;
+    height: 100%;
+}
+
+body{
+    font-family: 'IBM Plex Sans', sans-serif;
+
+}
+
+div.sidebar {
+    float: left;
+    width: 20%;
+    background-color: #073641;
+    color: #fff;
+    height: 100%;
+    padding:6px;
+}
+
+div.rightside {
+    float: left;
+    width: 80%;
+    position: relative;
+    height: 100%;
+
+}
+
+div.rightside header {
+
+    height: 90%;
+    overflow-y: scroll;
+
+}
+
+div.rightside header ol {
+    list-style-type: none;
+    text-indent: 10px;
+    margin-top: 10px;
+
+}
+
+div.rightside header ol li{
+    padding:10px
+}
+div.rightside header ol li div{}
+div.rightside header ol li div h4{
+    display: inline-block;
+    text-indent: 0;
+}
+div.rightside header ol li div span{
+    color: darkgrey;
+    font-size: 10pt;
+}
+
+div.rightside footer {
+    position: absolute;
+    bottom: 0px;
+    background-color: #999;
+    height: 10%;
+    width: 100%;
+    padding: 10px;
+
+}
+
+div.rightside footer form {
+    display: inline-block;
+    width:83%;
+
+}
+div.rightside footer input[type=text] {
+
+    font-size: 10pt;
+    width:92%;
+
+
+}
+
+div.rightside footer input[type=text], button {
+
+    border: 0px;
+    padding: 17px;
+}
+
+div.rightside footer button {
+    background-color: #077986;
+    color: #FFF;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+}
+
+div.rightside footer button:hover {
+    cursor: pointer;
+    color: #077986;
+    background-color: white;
+
+}
+div.rightside footer button:disabled{
+    opacity: 0.5;
+}
+
+div.rightside footer form {
+
+}
